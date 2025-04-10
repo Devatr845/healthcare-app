@@ -1,0 +1,199 @@
+.patient-metrics {
+  padding: 24px;
+  background: #F9FAFB;
+}
+
+.metrics-header {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.patient-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.patient-basic {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.patient-basic h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #111827;
+}
+
+.patient-tags {
+  display: flex;
+  gap: 12px;
+}
+
+.patient-tags span {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.id-tag {
+  background: #EFF6FF;
+  color: #3B82F6;
+}
+
+.blood-tag {
+  background: #FEF2F2;
+  color: #DC2626;
+}
+
+.age-tag {
+  background: #F3F4F6;
+  color: #4B5563;
+}
+
+.patient-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6B7280;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.primary-btn, .secondary-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background: #3B82F6;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #2563EB;
+}
+
+.secondary-btn {
+  background: white;
+  color: #4B5563;
+  border: 1px solid #E5E7EB;
+}
+
+.secondary-btn:hover {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.vital-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vital-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.vital-icon {
+  font-size: 20px;
+  color: #3B82F6;
+}
+
+.vital-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+.vital-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.vital-value span {
+  font-size: 14px;
+  font-weight: normal;
+  color: #6B7280;
+}
+
+.detailed-metrics {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.metrics-controls select {
+  padding: 8px 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  background: white;
+  color: #4B5563;
+}
+
+.metrics-chart {
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .patient-info {
+    flex-direction: column;
+  }
+
+  .patient-contact {
+    flex-direction: column;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .metrics-controls {
+    flex-direction: column;
+  }
+
+  .metrics-controls select {
+    width: 100%;
+  }
+} 

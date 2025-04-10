@@ -1,0 +1,194 @@
+.patient-profile {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.patient-basic-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.patient-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info-text h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #111827;
+}
+
+.patient-tags {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.patient-tags span {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.patient-id {
+  background: #EFF6FF;
+  color: #3B82F6;
+}
+
+.blood-group {
+  background: #FEF2F2;
+  color: #DC2626;
+}
+
+.age-gender {
+  background: #F3F4F6;
+  color: #4B5563;
+}
+
+.profile-nav {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #E5E7EB;
+  padding-bottom: 16px;
+}
+
+.profile-nav button {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  color: #6B7280;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile-nav button.active {
+  color: #3B82F6;
+}
+
+.profile-nav button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3B82F6;
+}
+
+.overview-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  margin: 0 0 16px 0;
+  color: #111827;
+  font-size: 18px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #4B5563;
+}
+
+.medication-item {
+  margin-bottom: 16px;
+}
+
+.medication-item h4 {
+  margin: 0 0 4px 0;
+  color: #111827;
+}
+
+.medication-item p {
+  margin: 0 0 8px 0;
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.adherence-bar {
+  height: 4px;
+  background: #E5E7EB;
+  border-radius: 2px;
+}
+
+.adherence-fill {
+  height: 100%;
+  background: #059669;
+  border-radius: 2px;
+}
+
+.allergy-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.severity-severe {
+  color: #DC2626;
+}
+
+.severity-moderate {
+  color: #F59E0B;
+}
+
+.allergy-type {
+  color: #6B7280;
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.vitals-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .patient-basic-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-nav {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .profile-nav button {
+    white-space: nowrap;
+  }
+} 

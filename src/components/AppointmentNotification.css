@@ -1,0 +1,250 @@
+.notification-wrapper {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 
+              0 8px 16px rgba(0, 0, 0, 0.03);
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notification-header h3 {
+  font-size: 20px;
+  color: #1E293B;
+  margin: 0;
+}
+
+.view-all-btn {
+  color: #3B82F6;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.view-all-btn:hover {
+  background: #EFF6FF;
+}
+
+.appointment-notification {
+  background: linear-gradient(to right bottom, #d4edda, #e8f5e9);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(40, 167, 69, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.appointment-notification::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+                    linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  background-size: 20px 20px;
+  opacity: 0.5;
+}
+
+.appointment-content {
+  display: grid;
+  gap: 24px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(40, 167, 69, 0.1);
+}
+
+.avatar-circle {
+  width: 56px;
+  height: 56px;
+  background: white;
+  border: 2px solid #28a745;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-avatar {
+  font-size: 24px;
+  color: #64748B;
+}
+
+.doctor-details h4 {
+  color: #1e4620;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.doctor-details span {
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.appointment-details {
+  padding: 20px 0;
+  display: grid;
+  gap: 16px;
+}
+
+.time-details,
+.location-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2e7d32;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.reschedule-btn,
+.confirm-btn {
+  flex: 1;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.reschedule-btn {
+  background: white;
+  border: 1px solid rgba(40, 167, 69, 0.2);
+  color: #2e7d32;
+}
+
+.confirm-btn {
+  background: #28a745;
+  border: none;
+  color: white;
+}
+
+.reschedule-btn:hover {
+  background: #f8f9fa;
+  border-color: #28a745;
+  transform: translateY(-1px);
+}
+
+.confirm-btn:hover {
+  background: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+.reschedule-btn:disabled,
+.confirm-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.appointment-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: white;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #28a745;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.appointment-status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #28a745;
+}
+
+@media (max-width: 768px) {
+  .notification-wrapper {
+    padding: 12px;
+  }
+
+  .doctor-info {
+    flex-wrap: wrap;
+  }
+
+  .time-details, .location-details {
+    font-size: 11px;
+  }
+
+  .action-buttons {
+    padding: 0 8px;
+  }
+
+  .action-buttons button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-wrapper {
+    padding: 8px;
+  }
+
+  .notification-header {
+    padding: 0 8px;
+  }
+
+  .appointment-notification {
+    padding: 12px;
+  }
+
+  .doctor-details h4 {
+    font-size: 13px;
+  }
+
+  .doctor-details span {
+    font-size: 11px;
+  }
+
+  .time-details, .location-details {
+    font-size: 10px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+    padding: 12px 16px;
+  }
+} 

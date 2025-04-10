@@ -1,0 +1,270 @@
+.lab-results-section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title-area h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.add-test-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-test-btn:hover {
+  background: #2563EB;
+}
+
+.view-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.category-filters {
+  display: flex;
+  gap: 12px;
+}
+
+.category-filters button {
+  padding: 8px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: white;
+  color: #6B7280;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-filters button.active {
+  background: #EFF6FF;
+  border-color: #3B82F6;
+  color: #3B82F6;
+}
+
+.trend-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  color: #6B7280;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.trend-toggle.active {
+  background: #EFF6FF;
+  border-color: #3B82F6;
+  color: #3B82F6;
+}
+
+.category-section {
+  margin-bottom: 32px;
+}
+
+.category-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+.trend-chart {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.test-result-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.test-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.test-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.normal {
+  background: #DCFCE7;
+}
+
+.status-badge.high {
+  background: #FEE2E2;
+}
+
+.status-badge.low {
+  background: #FEF3C7;
+}
+
+.test-value {
+  margin-bottom: 16px;
+}
+
+.test-value .value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.test-value .unit {
+  font-size: 14px;
+  color: #6B7280;
+  margin-left: 4px;
+}
+
+.reference-range {
+  margin-bottom: 16px;
+}
+
+.reference-range label {
+  display: block;
+  font-size: 12px;
+  color: #6B7280;
+  margin-bottom: 4px;
+}
+
+.reference-range span {
+  font-size: 14px;
+  color: #111827;
+}
+
+.doctor-notes {
+  margin-bottom: 16px;
+}
+
+.doctor-notes label {
+  display: block;
+  font-size: 12px;
+  color: #6B7280;
+  margin-bottom: 4px;
+}
+
+.doctor-notes p {
+  font-size: 14px;
+  color: #4B5563;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.test-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download-report {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #F3F4F6;
+  border: none;
+  border-radius: 6px;
+  color: #4B5563;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.download-report:hover {
+  background: #E5E7EB;
+}
+
+@media (max-width: 768px) {
+  .title-area {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .add-test-btn {
+    justify-content: center;
+  }
+
+  .view-controls {
+    flex-direction: column;
+  }
+
+  .category-filters {
+    flex-wrap: wrap;
+  }
+
+  .category-filters button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .trend-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tests-grid {
+    grid-template-columns: 1fr;
+  }
+} 

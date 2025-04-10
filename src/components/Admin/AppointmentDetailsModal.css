@@ -1,0 +1,92 @@
+.details-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-section {
+  border-bottom: 1px solid #E5E7EB;
+  padding-bottom: 20px;
+}
+
+.detail-section h4 {
+  color: #111827;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.info-item .icon {
+  color: #6B7280;
+  margin-top: 4px;
+}
+
+.info-item label {
+  color: #6B7280;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  color: #111827;
+  margin: 0;
+  font-size: 14px;
+}
+
+.status {
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.status.completed { background: #DCF7E3; color: #16A34A; }
+.status.cancelled { background: #FEE2E2; color: #DC2626; }
+.status.in-progress { background: #EFF6FF; color: #3B82F6; }
+.status.confirmed { background: #FEF3C7; color: #D97706; }
+
+.medical-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.medical-details label {
+  color: #6B7280;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 640px) {
+  .details-modal {
+    padding: 16px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+} 

@@ -1,0 +1,109 @@
+.activity-logs {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logs-header {
+  margin-bottom: 24px;
+}
+
+.logs-header h2 {
+  font-size: 24px;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  gap: 12px;
+}
+
+.date-range-select,
+.type-select {
+  padding: 8px 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.action-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.print-btn {
+  background: #F3F4F6;
+  border: none;
+  color: #4B5563;
+}
+
+.download-btn {
+  background: #3B82F6;
+  border: none;
+  color: white;
+}
+
+.share-btn {
+  background: #F3F4F6;
+  border: none;
+  color: #4B5563;
+}
+
+.activity-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #E5E7EB;
+  padding-bottom: 12px;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  color: #6B7280;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-btn.active {
+  color: #3B82F6;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3B82F6;
+}
+
+.activity-content {
+  min-height: 400px;
+} 

@@ -1,0 +1,289 @@
+.medical-conditions {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+.condition-filters {
+  display: flex;
+  gap: 12px;
+}
+
+.condition-filters button {
+  padding: 8px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: white;
+  color: #6B7280;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.condition-filters button.active {
+  background: #EFF6FF;
+  border-color: #3B82F6;
+  color: #3B82F6;
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.condition-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.condition-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.condition-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.condition-title h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.severity-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.severity-badge.mild {
+  background: #DCFCE7;
+  color: #059669;
+}
+
+.severity-badge.moderate {
+  background: #FEF3C7;
+  color: #F59E0B;
+}
+
+.severity-badge.severe {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.condition-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.status-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.status-icon.active {
+  color: #F59E0B;
+}
+
+.status-icon.controlled {
+  color: #059669;
+}
+
+.status-icon.resolved {
+  color: #3B82F6;
+}
+
+.condition-details {
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6B7280;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.doctor-notes {
+  margin-bottom: 20px;
+}
+
+.doctor-notes h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.doctor-notes p {
+  font-size: 14px;
+  color: #4B5563;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.treatments-section {
+  margin-bottom: 20px;
+}
+
+.treatments-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.treatments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.treatment-item {
+  padding: 12px;
+  background: #F9FAFB;
+  border-radius: 8px;
+}
+
+.treatment-type {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.treatment-type strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.treatment-type span {
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.reports-section {
+  border-top: 1px solid #E5E7EB;
+  padding-top: 20px;
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.reports-header h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.view-reports-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #F3F4F6;
+  border: none;
+  border-radius: 6px;
+  color: #4B5563;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-reports-btn:hover {
+  background: #E5E7EB;
+}
+
+.reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.report-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #F9FAFB;
+  border-radius: 8px;
+}
+
+.report-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.report-name {
+  font-size: 14px;
+  color: #111827;
+}
+
+.report-date {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.download-btn {
+  padding: 6px 12px;
+  background: #EFF6FF;
+  border: none;
+  border-radius: 6px;
+  color: #3B82F6;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #DBEAFE;
+}
+
+@media (max-width: 768px) {
+  .condition-filters {
+    flex-wrap: wrap;
+  }
+
+  .condition-filters button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .conditions-grid {
+    grid-template-columns: 1fr;
+  }
+} 

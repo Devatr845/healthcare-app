@@ -1,0 +1,279 @@
+.allergies-section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title-area h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.add-allergy-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-allergy-btn:hover {
+  background: #2563EB;
+}
+
+.allergy-filters {
+  display: flex;
+  gap: 12px;
+}
+
+.allergy-filters button {
+  padding: 8px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background: white;
+  color: #6B7280;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.allergy-filters button.active {
+  background: #EFF6FF;
+  border-color: #3B82F6;
+  color: #3B82F6;
+}
+
+.allergies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.allergy-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid transparent;
+}
+
+.allergy-card.severity-severe {
+  border-left-color: #DC2626;
+}
+
+.allergy-card.severity-moderate {
+  border-left-color: #F59E0B;
+}
+
+.allergy-card.severity-mild {
+  border-left-color: #059669;
+}
+
+.allergy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.allergy-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.allergy-title h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.allergy-type {
+  font-size: 12px;
+  color: #6B7280;
+  text-transform: capitalize;
+}
+
+.severity-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.severity-severe .severity-indicator {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.severity-moderate .severity-indicator {
+  background: #FEF3C7;
+  color: #F59E0B;
+}
+
+.severity-mild .severity-indicator {
+  background: #DCFCE7;
+  color: #059669;
+}
+
+.allergy-details {
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6B7280;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.doctor-notes {
+  margin-bottom: 20px;
+}
+
+.doctor-notes h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.doctor-notes p {
+  font-size: 14px;
+  color: #4B5563;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.treatments-section {
+  margin-bottom: 20px;
+}
+
+.treatments-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.treatments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.treatment-item {
+  padding: 12px;
+  background: #F9FAFB;
+  border-radius: 8px;
+}
+
+.treatment-item strong {
+  display: block;
+  font-size: 14px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.treatment-item p {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.emergency-section {
+  border-top: 1px solid #E5E7EB;
+  padding-top: 20px;
+}
+
+.emergency-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background: #FEF2F2;
+  border: none;
+  border-radius: 8px;
+  color: #DC2626;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.emergency-toggle:hover {
+  background: #FEE2E2;
+}
+
+.emergency-instructions {
+  margin-top: 12px;
+  padding: 16px;
+  background: #FEF2F2;
+  border-radius: 8px;
+}
+
+.emergency-instructions ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #DC2626;
+}
+
+.emergency-instructions li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.emergency-instructions li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .title-area {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .add-allergy-btn {
+    justify-content: center;
+  }
+
+  .allergy-filters {
+    flex-wrap: wrap;
+  }
+
+  .allergy-filters button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .allergies-grid {
+    grid-template-columns: 1fr;
+  }
+} 

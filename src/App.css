@@ -1,0 +1,61 @@
+.main-wrapper {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  transition: margin 0.3s ease, width 0.3s ease;
+}
+
+.main-content {
+  padding: 90px 24px 24px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Emergency button positioning */
+.main-content > .emergency-button-container {
+  margin-bottom: 24px;
+  position: sticky;
+  top: 90px;
+  z-index: 10;
+}
+
+/* Add responsive sidebar handling */
+@media (max-width: 992px) {
+  .main-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 70px 16px 16px;
+  }
+  
+  .main-content > .emergency-button-container {
+    margin-bottom: 16px;
+  }
+}
+
+/* Ensure the app container is full height */
+.app {
+  min-height: 100vh;
+  position: relative;
+} 

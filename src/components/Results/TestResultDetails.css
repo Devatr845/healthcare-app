@@ -1,0 +1,254 @@
+/* TestResultDetails.css */
+.test-details-modal {
+  background-color: var(--card-background);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.test-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.test-info {
+  flex: 1;
+}
+
+.test-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.test-meta {
+  display: flex;
+  gap: 2rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-action {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.primary-action:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondary-action {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.secondary-action:hover {
+  background-color: var(--background-color);
+}
+
+.test-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.results-section {
+  background-color: var(--background-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.parameters-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.parameters-table th,
+.parameters-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.parameters-table th {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.parameter-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.parameter-value {
+  font-weight: 600;
+}
+
+.parameter-range {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.value-normal {
+  color: #059669;
+}
+
+.value-abnormal {
+  color: #dc2626;
+}
+
+.value-borderline {
+  color: #d97706;
+}
+
+.notes-section {
+  background-color: var(--background-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.doctor-notes {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.recommendations {
+  margin-top: 1.5rem;
+}
+
+.recommendation-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.recommendation-icon {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+.recommendation-content {
+  flex: 1;
+}
+
+.recommendation-title {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.recommendation-description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .test-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .test-details-modal {
+    padding: 1.5rem;
+  }
+
+  .test-details-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .test-meta {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .parameters-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Dark Mode Adjustments */
+[data-theme='dark'] .recommendation-item {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Print Styles */
+@media print {
+  .test-details-modal {
+    background: white;
+    padding: 0;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .test-content {
+    grid-template-columns: 1fr;
+  }
+
+  .results-section,
+  .notes-section {
+    background: none;
+    padding: 0;
+  }
+
+  .parameters-table th,
+  .parameters-table td {
+    border-color: #000;
+  }
+} 

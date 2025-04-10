@@ -1,0 +1,588 @@
+/* PatientAnalytics.css */
+.analytics-page {
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box;
+  /* Prevent unnecessary vertical scroll */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-page.dark-mode {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.analytics-title h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #0f172a;
+}
+
+.analytics-page.dark-mode .analytics-title h1 {
+  color: #f8fafc;
+}
+
+.analytics-title p {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.analytics-page.dark-mode .analytics-title p {
+  color: #94a3b8;
+}
+
+.analytics-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.time-frame-selector {
+  display: flex;
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  padding: 0.25rem;
+}
+
+.analytics-page.dark-mode .time-frame-selector {
+  background-color: #334155;
+}
+
+.time-frame-selector button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.analytics-page.dark-mode .time-frame-selector button {
+  color: #94a3b8;
+}
+
+.time-frame-selector button.active {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-page.dark-mode .time-frame-selector button.active {
+  background-color: #475569;
+  color: #f8fafc;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.customize-btn, .theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.analytics-page.dark-mode .customize-btn,
+.analytics-page.dark-mode .theme-toggle {
+  background-color: #334155;
+  border-color: #475569;
+  color: #94a3b8;
+}
+
+.customize-btn:hover, .theme-toggle:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.analytics-page.dark-mode .customize-btn:hover,
+.analytics-page.dark-mode .theme-toggle:hover {
+  background-color: #475569;
+  color: #f8fafc;
+}
+
+.theme-toggle {
+  padding: 0.5rem;
+}
+
+/* Improved analytics content grid layout */
+.analytics-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem; /* Add space at bottom to prevent overlap with chat button */
+  flex: 1;
+}
+
+/* Make sure the Health Snapshot section spans full width */
+.health-snapshot-section {
+  grid-column: span 12;
+  margin-bottom: 0.5rem;
+}
+
+/* Section styles */
+.analytics-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.analytics-section:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.analytics-page.dark-mode .analytics-section {
+  background-color: #1e293b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.analytics-page.dark-mode .section-header {
+  border-bottom-color: #334155;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.analytics-page.dark-mode .section-title {
+  color: #f8fafc;
+}
+
+.section-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.section-actions button {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.375rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analytics-page.dark-mode .section-actions button {
+  color: #94a3b8;
+}
+
+.section-actions button:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.analytics-page.dark-mode .section-actions button:hover {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+/* Health graphs section layout */
+.health-graphs-section {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Fix for section widths */
+.vital-signs-section,
+.physical-activity-section,
+.sleep-insights-section {
+  width: 100%;
+}
+
+/* Customization panel */
+.customization-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  z-index: 1000;
+  overflow-y: auto;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.analytics-page.dark-mode .customization-panel {
+  background-color: #1e293b;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.customization-panel.hidden {
+  transform: translateX(100%);
+}
+
+.customization-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.customization-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #0f172a;
+}
+
+.analytics-page.dark-mode .customization-header h2 {
+  color: #f8fafc;
+}
+
+.close-panel-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.375rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analytics-page.dark-mode .close-panel-btn {
+  color: #94a3b8;
+}
+
+.close-panel-btn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.analytics-page.dark-mode .close-panel-btn:hover {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+.widget-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.widget-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.analytics-page.dark-mode .widget-toggle {
+  background-color: #334155;
+}
+
+.widget-toggle:hover {
+  background-color: #f1f5f9;
+}
+
+.analytics-page.dark-mode .widget-toggle:hover {
+  background-color: #475569;
+}
+
+.widget-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.widget-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #e0f2fe;
+  color: #0ea5e9;
+  border-radius: 8px;
+}
+
+.analytics-page.dark-mode .widget-icon {
+  background-color: #0c4a6e;
+  color: #38bdf8;
+}
+
+.widget-name {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.analytics-page.dark-mode .widget-name {
+  color: #f8fafc;
+}
+
+/* Toggle switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.analytics-page.dark-mode .toggle-slider {
+  background-color: #475569;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #0ea5e9;
+}
+
+.analytics-page.dark-mode input:checked + .toggle-slider {
+  background-color: #0284c7;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Enhanced responsive design */
+@media (max-width: 1200px) {
+  .health-graphs-section {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .analytics-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .health-snapshot-section,
+  .health-graphs-section {
+    grid-column: 1 / -1;
+  }
+  
+  .health-graphs-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-page {
+    padding: 1rem;
+  }
+  
+  .analytics-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .analytics-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .time-frame-selector {
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+  
+  .analytics-section {
+    padding: 1rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .section-actions {
+    align-self: flex-end;
+  }
+  
+  .customization-panel {
+    width: 100%;
+  }
+  
+  .analytics-content {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .analytics-page {
+    padding: 0.75rem;
+  }
+  
+  .analytics-title h1 {
+    font-size: 1.5rem;
+  }
+  
+  .time-frame-selector button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+  
+  .customize-btn, .theme-toggle {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+  
+  .widget-toggle {
+    padding: 0.625rem;
+  }
+  
+  .widget-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .widget-name {
+    font-size: 0.875rem;
+  }
+  
+  .analytics-content {
+    gap: 0.75rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .analytics-page,
+  .analytics-section,
+  .analytics-section:hover,
+  .customization-panel,
+  .toggle-slider,
+  .toggle-slider:before {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  .analytics-page {
+    --high-contrast-bg: white;
+    --high-contrast-text: black;
+    --high-contrast-border: black;
+    
+    background-color: var(--high-contrast-bg);
+    color: var(--high-contrast-text);
+  }
+  
+  .analytics-page.dark-mode {
+    --high-contrast-bg: black;
+    --high-contrast-text: white;
+    --high-contrast-border: white;
+    
+    background-color: var(--high-contrast-bg);
+    color: var(--high-contrast-text);
+  }
+  
+  .analytics-section,
+  .time-frame-selector button.active,
+  .customize-btn,
+  .theme-toggle,
+  .widget-toggle {
+    border: 1px solid var(--high-contrast-border);
+    outline: 1px solid var(--high-contrast-border);
+  }
+} 

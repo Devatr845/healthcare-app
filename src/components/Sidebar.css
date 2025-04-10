@@ -1,0 +1,259 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1a472a;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebar nav {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  padding: 0;
+  margin: 4px 0;
+}
+
+.sidebar nav ul li.active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+.sidebar nav ul li a .icon {
+  font-size: 20px;
+}
+
+.user-profile {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-icon {
+  font-size: 32px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.close-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.logo-section {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.logo-section .logo-icon {
+  font-size: 32px;
+  color: #61DAFB; /* React's signature blue color */
+  animation: logo-spin 20s linear infinite;
+}
+
+.logo-section span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.search-section {
+  padding: 0 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 10px 36px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+}
+
+.search-section input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-section input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-section .search-icon {
+  position: absolute;
+  left: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
+
+.admin-link {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #61DAFB !important; /* React's signature blue color */
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 8px 12px;
+  border: 1px solid rgba(97, 218, 251, 0.3); /* Subtle border with React color */
+}
+
+.admin-link:hover {
+  background: rgba(97, 218, 251, 0.1) !important;
+  transform: translateX(5px);
+}
+
+.admin-link .icon {
+  color: #61DAFB !important;
+}
+
+.admin-link {
+  margin-top: 16px !important;
+  position: relative;
+}
+
+.admin-link::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar toggle button for mobile */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  background-color: #1a472a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 990;
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .sidebar-toggle {
+    display: flex;
+  }
+  
+  .sidebar-overlay {
+    display: block;
+  }
+  
+  .close-sidebar {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 85%;
+  }
+  
+  .sidebar-toggle {
+    top: 15px;
+    left: 15px;
+  }
+  
+  .user-profile span {
+    font-size: 14px;
+  }
+} 
